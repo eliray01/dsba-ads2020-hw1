@@ -102,7 +102,7 @@ public:
         std::pair <Number, Number> pair_num2 = split(input2);
         Number a = Karatsuba(pair_num1.first,pair_num2.first);
         Number d = Karatsuba(pair_num1.second,pair_num2.second);
-        Number e = Karatsuba(pair_num1.first + pair_num1.second, pair_num1.first + pair_num1.second) - a - d;
+        Number e = Karatsuba(pair_num1.first + pair_num1.second, pair_num2.first + pair_num2.second) - a - d;
         return powNum(a, size/1) + powNum(e, size/2) + d;
     }
 };
